@@ -1,32 +1,47 @@
-//
-//  IOSGarageApp.swift
-//  IOSGarage
-//
-//  Created by TUTU on 21/10/2026.
-//
-
 import SwiftUI
 import SwiftData
+import FirebaseCore
+import FirebaseMessaging
+import GoogleSignIn
+import UserNotifications
+
+final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
+        return true
+    }
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
+    }
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        guard let token = fcmToken else { return }
+        Task { await NotificationService.shared.saveToken(token) }
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        [.banner, .sound, .badge]
+    }
+}
 
 @main
-struct IOSGarageApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+struct GarageApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
+    @State private var auth = AuthService()
+    @State private var store = DataStore()
+    @State private var location = LocationService()
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    init() { FirebaseApp.configure() }   // must run before any Firebase object is touched
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environment(auth)
+                .environment(store)
+                .environment(location)
+                .task { auth.start() }
+                .onOpenURL { GIDSignIn.sharedInstance.handle($0) }
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(for: [Vehicle.self, ServiceRecord.self, Expense.self])
     }
 }
