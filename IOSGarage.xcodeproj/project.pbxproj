@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D720B310308912F200210BFC /* IOSGarageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B30F308912F200210BFC /* IOSGarageApp.swift */; };
+		D720B310308912F200210BFC /* IOSGarage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B30F308912F200210BFC /* IOSGarage.swift */; };
 		D720B312308912F200210BFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B311308912F200210BFC /* ContentView.swift */; };
 		D720B314308912F200210BFC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B313308912F200210BFC /* Item.swift */; };
 		D720B316308912F400210BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D720B315308912F400210BFC /* Assets.xcassets */; };
@@ -15,6 +15,15 @@
 		D720B323308912F400210BFC /* IOSGarageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B322308912F400210BFC /* IOSGarageTests.swift */; };
 		D720B32D308912F400210BFC /* IOSGarageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B32C308912F400210BFC /* IOSGarageUITests.swift */; };
 		D720B32F308912F400210BFC /* IOSGarageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D720B32E308912F400210BFC /* IOSGarageUITestsLaunchTests.swift */; };
+		D73D129B308D0EFB009C91E8 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = D73D129A308D0EFB009C91E8 /* Views */; };
+		D73D129D308D0F93009C91E8 /* ML in Resources */ = {isa = PBXBuildFile; fileRef = D73D129C308D0F93009C91E8 /* ML */; };
+		D73D129F308D0F9F009C91E8 /* Backend in Resources */ = {isa = PBXBuildFile; fileRef = D73D129E308D0F9F009C91E8 /* Backend */; };
+		D73D12A3308D0FCC009C91E8 /* Services in Resources */ = {isa = PBXBuildFile; fileRef = D73D12A0308D0FCC009C91E8 /* Services */; };
+		D73D12A5308D0FCC009C91E8 /* Widget in Resources */ = {isa = PBXBuildFile; fileRef = D73D12A2308D0FCC009C91E8 /* Widget */; };
+		D73D12A8308D0FF5009C91E8 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = D73D12A6308D0FF5009C91E8 /* Models */; };
+		D73D12B8308DB176009C91E8 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D73D12B7308DB176009C91E8 /* FirebaseMessaging */; };
+		D73D12BC308DB58B009C91E8 /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = D73D12BB308DB58B009C91E8 /* GoogleService-Info .plist */; };
+		D73D12BE308DB685009C91E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D73D12BD308DB685009C91E8 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		D720B30C308912F200210BFC /* IOSGarage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSGarage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D720B30F308912F200210BFC /* IOSGarageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSGarageApp.swift; sourceTree = "<group>"; };
+		D720B30F308912F200210BFC /* IOSGarage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSGarage.swift; sourceTree = "<group>"; };
 		D720B311308912F200210BFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D720B313308912F200210BFC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D720B315308912F400210BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +55,14 @@
 		D720B328308912F400210BFC /* IOSGarageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSGarageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D720B32C308912F400210BFC /* IOSGarageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSGarageUITests.swift; sourceTree = "<group>"; };
 		D720B32E308912F400210BFC /* IOSGarageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSGarageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D73D129A308D0EFB009C91E8 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
+		D73D129C308D0F93009C91E8 /* ML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ML; sourceTree = "<group>"; };
+		D73D129E308D0F9F009C91E8 /* Backend */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backend; sourceTree = "<group>"; };
+		D73D12A0308D0FCC009C91E8 /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
+		D73D12A2308D0FCC009C91E8 /* Widget */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Widget; sourceTree = "<group>"; };
+		D73D12A6308D0FF5009C91E8 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		D73D12B9308DB1B8009C91E8 /* FirebaseCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseCore; path = "../../Library/Developer/Xcode/DerivedData/IOSGarage-bfrptxgdjbvvhecgmjrwmwgzsend/SourcePackages/checkouts/firebase-ios-sdk/FirebaseCore"; sourceTree = "<group>"; };
+		D73D12BB308DB58B009C91E8 /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73D12B8308DB176009C91E8 /* FirebaseMessaging in Frameworks */,
+				D73D12BE308DB685009C91E8 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +99,7 @@
 				D720B321308912F400210BFC /* IOSGarageTests */,
 				D720B32B308912F400210BFC /* IOSGarageUITests */,
 				D720B30D308912F200210BFC /* Products */,
+				D73D12B1308DAED1009C91E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +116,16 @@
 		D720B30E308912F200210BFC /* IOSGarage */ = {
 			isa = PBXGroup;
 			children = (
-				D720B30F308912F200210BFC /* IOSGarageApp.swift */,
-				D7B28BCB308A65FF0026619A /* Backend */,
+				D73D12A6308D0FF5009C91E8 /* Models */,
+				D73D12A0308D0FCC009C91E8 /* Services */,
+				D73D12A2308D0FCC009C91E8 /* Widget */,
+				D73D129E308D0F9F009C91E8 /* Backend */,
+				D73D129C308D0F93009C91E8 /* ML */,
+				D73D129A308D0EFB009C91E8 /* Views */,
+				D720B30F308912F200210BFC /* IOSGarage.swift */,
 				D720B311308912F200210BFC /* ContentView.swift */,
 				D720B313308912F200210BFC /* Item.swift */,
+				D73D12BB308DB58B009C91E8 /* GoogleService-Info .plist */,
 				D720B315308912F400210BFC /* Assets.xcassets */,
 				D720B317308912F400210BFC /* Preview Content */,
 			);
@@ -131,11 +157,12 @@
 			path = IOSGarageUITests;
 			sourceTree = "<group>";
 		};
-		D7B28BCB308A65FF0026619A /* Backend */ = {
+		D73D12B1308DAED1009C91E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D73D12B9308DB1B8009C91E8 /* FirebaseCore */,
 			);
-			path = Backend;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +181,10 @@
 			dependencies = (
 			);
 			name = IOSGarage;
+			packageProductDependencies = (
+				D73D12B7308DB176009C91E8 /* FirebaseMessaging */,
+				D73D12BD308DB685009C91E8 /* FirebaseAuth */,
+			);
 			productName = IOSGarage;
 			productReference = D720B30C308912F200210BFC /* IOSGarage.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +257,10 @@
 				Base,
 			);
 			mainGroup = D720B303308912F200210BFC;
+			packageReferences = (
+				D73D12B6308DB100009C91E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D73D12BA308DB41E009C91E8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = D720B30D308912F200210BFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,8 +277,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73D12A3308D0FCC009C91E8 /* Services in Resources */,
+				D73D12BC308DB58B009C91E8 /* GoogleService-Info .plist in Resources */,
+				D73D129B308D0EFB009C91E8 /* Views in Resources */,
+				D73D12A8308D0FF5009C91E8 /* Models in Resources */,
+				D73D12A5308D0FCC009C91E8 /* Widget in Resources */,
 				D720B319308912F400210BFC /* Preview Assets.xcassets in Resources */,
 				D720B316308912F400210BFC /* Assets.xcassets in Resources */,
+				D73D129F308D0F9F009C91E8 /* Backend in Resources */,
+				D73D129D308D0F93009C91E8 /* ML in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +312,7 @@
 			files = (
 				D720B312308912F200210BFC /* ContentView.swift in Sources */,
 				D720B314308912F200210BFC /* Item.swift in Sources */,
-				D720B310308912F200210BFC /* IOSGarageApp.swift in Sources */,
+				D720B310308912F200210BFC /* IOSGarage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +636,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D73D12B6308DB100009C91E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.24.0;
+			};
+		};
+		D73D12BA308DB41E009C91E8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D73D12B7308DB176009C91E8 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D73D12B6308DB100009C91E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		D73D12BD308DB685009C91E8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D73D12B6308DB100009C91E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D720B304308912F200210BFC /* Project object */;
 }

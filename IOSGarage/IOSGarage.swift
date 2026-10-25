@@ -25,7 +25,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
 }
 
 @main
-struct GarageApp: App {
+struct IOSGarage: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @State private var auth = AuthService()
     @State private var store = DataStore()

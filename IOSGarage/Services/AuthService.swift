@@ -13,7 +13,7 @@ final class AuthService {
 
     private var handle: AuthStateDidChangeListenerHandle?
     private var pendingProfile: (name: String, role: UserRole, phone: String)?
-    private let db = Firestore.firestore()
+    private var db: Firestore { Firestore.firestore() }
 
     func start() {
         guard handle == nil else { return }

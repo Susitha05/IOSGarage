@@ -15,7 +15,7 @@ final class DataStore {
     var activeTow: TowRequest?
 
     private var listeners: [ListenerRegistration] = []
-    private let db = Firestore.firestore()
+    pprivate var db: Firestore { Firestore.firestore() }
     private var currentUser: AppUser?
 
     // MARK: listeners
